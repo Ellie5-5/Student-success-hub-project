@@ -1,23 +1,21 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success Stories | Student Success Hub</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
     <header>
         <nav>
-            <h2>Student Success Hub</h2>
-
+            <div class="brand">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo" class="site-logo">
+                </a>
+                <h2>Student Success Hub</h2>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -31,20 +29,52 @@
     </header>
 
     <main>
-    <section>
-        <h1>Success Stories</h1>
+        <section class="stories-section">
+            <div class="stories-header">
+                <h1>Real Student Stories</h1>
+                <p>See how fellow students used our guides and tools to transform their grades and semester routines.</p>
+            </div>
 
-        <p>
-            Read student testimonials, experiences, and success stories.
-        </p>
-    </section>
-</main>
+            <div class="stories-grid">
+                <!-- Testimonial Card 1 -->
+                <div class="story-card">
+                    <div class="stars">★★★★★</div>
+                    <h3>"I finally stopped cramming the night before"</h3>
+                    <p class="quote">"I used to pull all-nighters before every midterm and end up exhausted with average grades. After using the study tips on this site, I broke my studying into small daily chunks. My GPA went from 2.8 to 3.7!"</p>
+                    <div class="student-info">
+                        <strong>Sarah M.</strong>
+                        <span>Computer Science Sophomore</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="story-card">
+                    <div class="stars">★★★★★</div>
+                    <h3>"Helped me survive my hardest semester"</h3>
+                    <p class="quote">"Taking 18 credits was overwhelming until I found the resource section here. The study guide templates saved me so much time when organizing my notes."</p>
+                    <div class="student-info">
+                        <strong>Alex R.</strong>
+                        <span>Business Administration Junior</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="story-card">
+                    <div class="stars">★★★★★</div>
+                    <h3>"Super helpful for freshmen"</h3>
+                    <p class="quote">"Coming straight out of high school, university workload was a total culture shock. The tips here made me realize I wasn't the only one struggling and gave me real ways to fix my schedule."</p>
+                    <div class="student-info">
+                        <strong>Emily T.</strong>
+                        <span>Engineering Freshman</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> 
 
     <footer>
         <p>&copy; 2026 Student Success Hub</p>
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
-
 </html>

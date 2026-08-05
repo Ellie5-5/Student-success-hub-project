@@ -1,23 +1,21 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Tools | Student Success Hub</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
     <header>
         <nav>
-            <h2>Student Success Hub</h2>
-
+            <div class="brand">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo" class="site-logo">
+                </a>
+                <h2>Student Success Hub</h2>
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -31,20 +29,51 @@
     </header>
 
     <main>
-    <section>
-        <h1>Interactive Tools</h1>
+        <section>
+            <h1>Student Study Tools</h1>
+            <p>We built these quick tools to help you figure out your study schedule and make sure you aren't missing anything before exam week hits!</p>
+            
+            <br>
 
-        <p>
-            Use our quizzes, calculators, and study-planning activities.
-        </p>
-    </section>
-</main>
+            <div class="tool-card">
+                <h2>📊 Study Time Cheat Sheet</h2>
+                <p>Not sure how much time you should spend studying each week outside of class? Here is the general rule of thumb:</p>
+                
+                <br>
+                <details style="padding: 10px; background: #ffffff; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 8px;">
+                    <summary style="cursor: pointer; font-weight: bold;">Light Semester (9 – 12 Credit Hours)</summary>
+                    <p style="margin-top: 8px;">Plan for roughly <strong>18 – 24 hours</strong> of independent study time per week.</p>
+                </details>
+
+                <details style="padding: 10px; background: #ffffff; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 8px;">
+                    <summary style="cursor: pointer; font-weight: bold;">Full-Time Semester (15 Credit Hours)</summary>
+                    <p style="margin-top: 8px;">Plan for roughly <strong>30 hours</strong> of independent study time per week.</p>
+                </details>
+
+                <details style="padding: 10px; background: #ffffff; border: 1px solid #ccc; border-radius: 5px;">
+                    <summary style="cursor: pointer; font-weight: bold;">Heavy Semester (18+ Credit Hours)</summary>
+                    <p style="margin-top: 8px;">Plan for roughly <strong>36+ hours</strong> of independent study time per week.</p>
+                </details>
+            </div>
+
+            <br><hr><br>
+
+            <div class="tool-card">
+                <h2>📝 Midterm & Exam Checklist</h2>
+                <p>Before you sit down for your test, check off these essential prep steps:</p>
+                <ul style="list-style: none; padding-left: 0; line-height: 2;">
+                    <li><input type="checkbox" id="check1"> <label for="check1"> Gather all lecture slides, syllabus notes, and homeworks</label></li>
+                    <li><input type="checkbox" id="check2"> <label for="check2"> Work through at least 2 practice quizzes or sample problems</label></li>
+                    <li><input type="checkbox" id="check3"> <label for="check3"> Quiz a classmate or explain a topic out loud</label></li>
+                    <li><input type="checkbox" id="check4"> <label for="check4"> Get a full night's sleep (no all-nighters!)</label></li>
+                </ul>
+            </div>
+        </section>
+    </main> 
 
     <footer>
         <p>&copy; 2026 Student Success Hub</p>
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
-
 </html>
