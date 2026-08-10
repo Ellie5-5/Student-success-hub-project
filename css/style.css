@@ -1,37 +1,63 @@
-/* Remove default spacing */
-* {
+/* 1. Theme Variables (Original Color Palette)*/
+:root {
+    --bg-main: #f4f7fb;            /* Original light blue-grey body */
+    --surface: #ffffff;            /* Card & content background */
+    --header-bg: #183b66;         /* Original deep navy blue */
+    --header-glass: rgba(24, 59, 102, 0.92);
+    
+    --text-primary: #222222;       /* Original dark text */
+    --text-muted: #555555;
+    --text-light: #ffffff;         /* Original white header text */
+    
+    --primary: #183b66;            /* Primary brand color */
+    --border-color: #dbe2ea;
+    
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+    --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* 2. Reset & Core Layout */
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Add html at the very top */
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
-/* Update your existing body block */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
-    color: #222222;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     line-height: 1.6;
-
-    /* ADD THESE 3 LINES */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Navigation area */
+/* 3. Header & Navigation*/
 header {
-    background-color: #183b66;
+    background-color: var(--header-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +65,6 @@ nav {
     gap: 15px;
 }
 
-/* Aligns the Logo and Title side-by-side */
 .brand {
     display: flex;
     align-items: center;
@@ -47,59 +72,150 @@ nav {
 }
 
 nav h2 {
-    color: white;
-    margin-bottom: 0;
+    color: var(--text-light);
+    margin: 0;
     font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.site-logo {
+    height: 45px;
+    width: auto;
+    background-color: #ffffff;
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    display: block;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.site-logo:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    align-items: center;
+    gap: 8px;
     list-style: none;
 }
 
 nav a {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Clean logo badge styling */
-.site-logo {
-    height: 45px !important;
-    width: auto !important;
-    background-color: #ffffff;
-    padding: 4px;
-    border-radius: 8px;
-    display: block;
+nav a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
 }
 
-/* Update your existing main block */
+/*  4. Main Content Area*/
 main {
-    flex: 1;                     /* ADD THIS LINE */
+    flex: 1;
     min-height: 70vh;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 60px 20px;
-    width: 100%;                 /* ADD THIS LINE */
+    width: 100%;
 }
 
-/* Footer */
+/* Reusable card component for main section items */
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #c5d0dd;
+}
+
+/* Standard Buttons using original Navy color */
+.btn, button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover, button:hover {
+    background-color: #102948;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Form Controls */
+input, textarea, select {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: var(--surface);
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(24, 59, 102, 0.15);
+}
+   /*5. Footer*/
 footer {
-    background-color: #183b66;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--text-light);
     padding: 20px;
     text-align: center;
+    margin-top: auto;
 }
 
-/* Mobile design */
+/*  6. Responsive Layout */
 @media screen and (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
     nav ul {
         flex-direction: column;
+        width: 100%;
+        gap: 6px;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 10px;
     }
 
     main {
