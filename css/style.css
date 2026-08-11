@@ -222,3 +222,213 @@ footer {
         padding: 40px 20px;
     }
 }
+/* =========================
+   RESOURCES + SERVICES
+========================= */
+
+.resources-page,
+.services-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+/* Page introduction */
+
+.resources-hero,
+.services-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.resources-hero h1,
+.services-hero h1 {
+    font-size: 36px;
+    color: #183b66;
+    margin: 10px 0;
+}
+
+.resources-hero p,
+.services-hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+}
+
+.page-label {
+    color: #183b66;
+    font-weight: bold;
+}
+
+
+/* Resource cards */
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.resource-card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.resource-card h2 {
+    color: #183b66;
+}
+
+.resource-card ul {
+    padding-left: 20px;
+}
+
+.resource-icon,
+.service-icon {
+    font-size: 30px;
+}
+
+
+/* Resource sections */
+
+.resource-section {
+    margin-top: 50px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    color: #183b66;
+}
+
+
+/* Helpful links */
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.helpful-link {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.helpful-link strong {
+    color: #183b66;
+}
+
+
+/* Useful links */
+
+.useful-links a {
+    display: block;
+    background-color: white;
+    padding: 18px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* Final resource tip */
+
+.resource-tip {
+    background-color: white;
+    padding: 25px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.service-card h2 {
+    color: #183b66;
+}
+
+.service-card a {
+    color: #183b66;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Support steps */
+
+.support-process {
+    margin-top: 50px;
+}
+
+.support-step {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.support-step > span {
+    font-weight: bold;
+    color: #183b66;
+}
+
+
+/* Bottom support box */
+
+.support-box {
+    background-color: white;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.page-button {
+    display: inline-block;
+    background-color: #183b66;
+    color: white;
+    padding: 10px 18px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 700px) {
+
+    .resource-grid,
+    .link-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
