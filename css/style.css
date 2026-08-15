@@ -394,6 +394,15 @@ select:focus {
 .tool-card ul {
     padding-left: 20px;
 }
+.tool-card li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tool-card input[type="checkbox"] {
+    width: auto;
+}
 
 details {
     background-color: var(--white);
