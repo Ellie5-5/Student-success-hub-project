@@ -1,321 +1,173 @@
-/* --- Basic Reset & Typography --- */
-* {
-  box-sizing: border-box;
+/* --- Global Body & Page Layout --- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333333;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  color: #333333;
-  background-color: #f4f6f9;
-}
-
 main {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 0 15px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-a {
+/* --- Typography & Headings --- */
+h1, h2, h3 {
+  color: #183b66;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* --- Links & Pseudo-Classes --- */
+a:link, a:visited {
   color: #183b66;
   text-decoration: none;
 }
 
-a:hover {
+a:hover, a:active {
+  color: #0f2642;
   text-decoration: underline;
 }
 
 /* --- Header & Navigation --- */
 header {
   background-color: #ffffff;
-  border-bottom: 2px solid #e2e8f0;
-}
-
-nav {
-  max-width: 1000px;
-  margin: 0 auto;
+  border-bottom: 2px solid #183b66;
+  text-align: center;
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .site-logo {
   height: 40px;
 }
 
-.brand h2 {
-  font-size: 1.2rem;
-  color: #183b66;
-}
-
 nav ul {
-  display: flex;
+  padding: 0;
+  margin: 10px 0;
   list-style: none;
-  gap: 15px;
-  flex-wrap: wrap;
 }
 
-nav a {
-  color: #333333;
-  font-weight: bold;
+nav li {
+  display: inline;
+  margin: 0 12px;
 }
 
-nav a:hover {
-  color: #183b66;
+/* --- Heroes, Content Boxes & Cards --- */
+.home-hero, .resources-hero, .services-hero, 
+.about-hero, .stories-header, .contact-hero,
+.card, .resource-card, .service-card, 
+.story-card, .tool-card, .content-block, 
+.support-box, .message-area, .info-card,
+.support-step {
+  background-color: #ffffff;
+  border: 1px solid #dbe4ee;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-/* --- Section Headers & Heroes --- */
 .home-hero, .resources-hero, .services-hero, 
 .about-hero, .stories-header, .contact-hero {
-  text-align: center;
-  background-color: #ffffff;
-  border: 1px solid #dbe4ee;
   border-top: 4px solid #183b66;
-  border-radius: 6px;
-  padding: 30px 20px;
-  margin-bottom: 25px;
-}
-
-.page-label, .contact-label, .small-title {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #183b66;
-  background-color: #e9eff6;
-  padding: 4px 10px;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  color: #183b66;
-  margin-bottom: 12px;
-}
-
-h2 {
-  color: #183b66;
-  margin-bottom: 10px;
-}
-
-.section-heading {
   text-align: center;
-  margin: 30px 0 15px;
 }
 
-/* --- Content Blocks --- */
-.content-block {
-  background-color: #ffffff;
-  border: 1px solid #dbe4ee;
+.content-block, .support-box {
   border-left: 4px solid #183b66;
-  border-radius: 6px;
-  padding: 20px;
-  margin: 20px 0;
 }
 
-.content-block p + p {
-  margin-top: 10px;
-}
-
-/* --- Grids & Cards --- */
-.home-grid, .resource-grid, .services-grid, 
-.about-grid, .team-grid, .stories-grid, .link-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin: 20px 0;
-}
-
-.card, .resource-card, .service-card, 
-.story-card, .tool-card, .info-card {
-  background-color: #ffffff;
-  border: 1px solid #dbe4ee;
-  border-radius: 6px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.resource-card ul, .about-list {
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-/* --- Stories Page Elements --- */
-.stars {
-  color: #f59e0b;
-  font-size: 1.1rem;
+/* --- Support Steps Number Badges --- */
+.support-step span {
+  background-color: #183b66;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 3px 10px;
   margin-bottom: 8px;
+}
+
+/* --- Badges, Stars & Quotes --- */
+.page-label, .contact-label, .small-title {
+  background-color: #e9eff6;
+  color: #183b66;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+}
+
+.stars {
+  color: orange;
+  font-weight: bold;
 }
 
 .quote {
   font-style: italic;
-  color: #555555;
-  margin: 10px 0;
 }
 
-.student-info strong {
-  display: block;
-  color: #183b66;
-}
-
-.student-info span {
-  font-size: 0.85rem;
-  color: #666666;
-}
-
-/* --- Buttons & Links --- */
-.btn, .page-button, button[type="submit"] {
+/* --- Buttons & Action Links --- */
+.btn, .page-button, button,
+a.btn:link, a.btn:visited,
+a.page-button:link, a.page-button:visited {
   display: inline-block;
   background-color: #183b66;
   color: #ffffff;
-  padding: 10px 18px;
-  border-radius: 5px;
-  border: none;
-  font-size: 0.95rem;
+  padding: 8px 14px;
+  border: 1px solid #183b66;
   font-weight: bold;
-  cursor: pointer;
-  margin-top: 12px;
   text-align: center;
+  margin-top: 8px;
+  text-decoration: none;
 }
 
-.btn:hover, .page-button:hover, button[type="submit"]:hover {
+.btn:hover, .page-button:hover, button:hover,
+a.btn:hover, a.btn:active,
+a.page-button:hover, a.page-button:active {
   background-color: #0f2642;
-  text-decoration: none;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .home-buttons {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
+  text-align: center;
   margin-top: 15px;
 }
 
+/* --- Useful Links Lists --- */
 .useful-links a, .helpful-link {
   display: block;
   background-color: #ffffff;
   border: 1px solid #dbe4ee;
-  border-radius: 6px;
-  padding: 15px;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* --- Tools Checklist Alignment --- */
+.tool-card li {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* --- Forms --- */
+.form-group input, textarea {
+  width: 95%;
+  padding: 6px;
+  margin-top: 5px;
   margin-bottom: 10px;
-  color: #333333;
-}
-
-.useful-links a:hover, .helpful-link:hover {
-  border-color: #183b66;
-  background-color: #f8fafc;
-  text-decoration: none;
-}
-
-/* --- Services & Support Elements --- */
-.support-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.support-step {
-  background-color: #ffffff;
-  border: 1px solid #dbe4ee;
-  border-radius: 6px;
-  padding: 15px;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.support-step span {
-  background-color: #183b66;
-  color: #ffffff;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
-.support-box {
-  background-color: #ffffff;
-  border: 1px solid #dbe4ee;
-  border-left: 5px solid #183b66;
-  border-radius: 6px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 25px 0;
-}
-
-/* --- Contact Form --- */
-.message-area {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  background-color: #ffffff;
-  border: 1px solid #dbe4ee;
-  border-radius: 6px;
-  padding: 25px;
-  margin-top: 25px;
-}
-
-.form-row {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.form-group {
-  flex: 1 1 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-bottom: 12px;
-}
-
-.form-group label {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #183b66;
-}
-
-input[type="text"], input[type="email"], textarea {
-  width: 100%;
-  padding: 8px 10px;
   border: 1px solid #cccccc;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 0.95rem;
-}
-
-input:focus, textarea:focus {
-  outline: 2px solid #183b66;
 }
 
 /* --- Footer --- */
 footer {
-  text-align: center;
-  padding: 20px;
   background-color: #183b66;
-  color: #ffffff;
-  font-size: 0.9rem;
-  margin-top: 40px;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
 }
