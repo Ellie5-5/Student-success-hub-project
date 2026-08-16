@@ -1,4 +1,4 @@
-/* --- Global Body & Page Layout --- */
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f6f9;
@@ -15,7 +15,7 @@ main {
   margin-bottom: 20px;
 }
 
-/* --- Typography & Headings --- */
+
 h1, h2, h3 {
   color: #183b66;
   margin-bottom: 10px;
@@ -25,7 +25,7 @@ p {
   margin-bottom: 10px;
 }
 
-/* --- Links & Pseudo-Classes --- */
+
 a:link, a:visited {
   color: #183b66;
   text-decoration: none;
@@ -36,7 +36,7 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
-/* --- Header & Navigation --- */
+
 header {
   background-color: #ffffff;
   border-bottom: 2px solid #183b66;
@@ -59,14 +59,14 @@ nav li {
   margin: 0 12px;
 }
 
-/* --- Heroes, Content Boxes & Cards --- */
+
 .home-hero, .resources-hero, .services-hero, 
 .about-hero, .stories-header, .contact-hero,
 .card, .resource-card, .service-card, 
 .story-card, .tool-card, .content-block, 
 .support-box, .message-area, .info-card,
 .support-step {
-  background-color: #ffffff;
+  background-color:#ffffff;
   border: 1px solid #dbe4ee;
   padding: 15px;
   margin-top: 15px;
@@ -83,7 +83,7 @@ nav li {
   border-left: 4px solid #183b66;
 }
 
-/* --- Support Steps Number Badges --- */
+
 .support-step span {
   background-color: #183b66;
   color: #ffffff;
@@ -92,7 +92,7 @@ nav li {
   margin-bottom: 8px;
 }
 
-/* --- Badges, Stars & Quotes --- */
+
 .page-label, .contact-label, .small-title {
   background-color: #e9eff6;
   color: #183b66;
@@ -110,7 +110,7 @@ nav li {
   font-style: italic;
 }
 
-/* --- Buttons & Action Links --- */
+
 .btn, .page-button, button,
 a.btn:link, a.btn:visited,
 a.page-button:link, a.page-button:visited {
@@ -138,7 +138,7 @@ a.page-button:hover, a.page-button:active {
   margin-top: 15px;
 }
 
-/* --- Useful Links Lists --- */
+
 .useful-links a, .helpful-link {
   display: block;
   background-color: #ffffff;
@@ -148,13 +148,13 @@ a.page-button:hover, a.page-button:active {
   margin-bottom: 8px;
 }
 
-/* --- Tools Checklist Alignment --- */
+
 .tool-card li {
   margin-top: 8px;
   margin-bottom: 8px;
 }
 
-/* --- Forms --- */
+
 .form-group input, textarea {
   width: 95%;
   padding: 6px;
@@ -163,7 +163,7 @@ a.page-button:hover, a.page-button:active {
   border: 1px solid #cccccc;
 }
 
-/* --- Footer --- */
+
 footer {
   background-color: #183b66;
   color: white;
